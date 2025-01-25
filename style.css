@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+.subheading {
+    color: orange;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+
+.get-in-touch {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-in-touch:hover {
+    background-color: white;
+    color: black;
+}
