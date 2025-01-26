@@ -60,3 +60,76 @@ body {
     background-color: white;
     color: black;
 }
+
+.services {
+    padding: 4em 2em;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+.services-heading h3 {
+    color: orange;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-heading h2 {
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 2em;
+    border-radius: 0.5em;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card .icon {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: orange;
+}
+
+.card h4 {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin: 1em 0;
+    color: #cccccc;
+}
+
+.learn-more {
+    color: orange;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: color 0.3s;
+}
+
+.learn-more:hover {
+    color: white;
+}

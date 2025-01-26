@@ -3,19 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3-HM Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>3-HM Website Replica</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .get-in-touch {
+            font-size: 16px;
+            color: #ffaa00;
+            text-decoration: none;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+
+        .hero-box {
+            padding: 20px 40px;
+            border: 2px solid #ffffff;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 24px;
+            color: #ffaa00;
+        }
+
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .services-title {
+            font-size: 18px;
+            color: #ffaa00;
+            margin-bottom: 20px;
+        }
+
+        .services-content {
+            font-size: 24px;
+        }
+
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 50px;
+            width: 2px;
+            background-color: #ffaa00;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #ffaa00;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="heading">We're 3-HM, We Build Things for Humans</div>
-        <div class="subheading">CRYPTO - NFT - YOUTUBE - PHOTOGRAPHY</div>
-    </div>
-
-    <div class="footer">
+    <header class="header">
         <div class="logo">3-HM</div>
         <a href="#" class="get-in-touch">GET IN TOUCH ></a>
-    </div>
-    <script src="script.js"></script>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-box">
+                <h1>We're 3-HM, We Build Things for Humans</h1>
+            </div>
+            <p class="tagline">CRYPTO - NFT - YOUTUBE - PHOTOGRAPHY</p>
+        </section>
+
+        <section class="services">
+            <div class="vertical-line"></div>
+            <h2 class="services-title">OUR SERVICES</h2>
+            <p class="services-content">Our team will take your portfolio to the next new level</p>
+        </section>
+
+        <!-- New Sections Below Our Services -->
+        <section class="section">
+            <h2 class="section-title">Section 1</h2>
+            <p class="section-content">This is the content for the first new section. Here you can describe your offerings or services in more detail.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Section 2</h2>
+            <p class="section-content">This is the content for the second new section. Add more information about your company or product here.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Section 3</h2>
+            <p class="section-content">This is the content for the third new section. You can provide additional details or features of your business here.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy; 2025 3-HM. All Rights Reserved.
+    </footer>
 </body>
 </html>
