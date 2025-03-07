@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3-HM Website Replica</title>
     <link rel="icon" type="image/png" href="Logo2.png"> <!-- Added Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -21,6 +23,7 @@
             gap: 30px; /* Adds space between logo and link */
             padding: 30px;
             background-color: rgb(24, 24, 24);
+            height: 5%;
             width: 100%;
             position: fixed;
             top: 0;
@@ -43,7 +46,7 @@
 
         .get-in-touch {
             font-size: 12px;
-            color: #ffaa00;
+            color: f7ac54;
             text-decoration: none;
             position: absolute;
             right: 120px; /* Moves it 10px from the right */
@@ -62,17 +65,21 @@
             background-color: rgb(31, 31, 31); /* Updated background */
         }
 
-        .hero-box {
-            padding: 20px 40px;
-            border: 2px solid #ffffff;
+        .hero-box h1 {
+            font-size: 51.5px;
+            font-family: 'Merriweather', serif;
+            padding: 40px 50px; /* Increase padding for a larger box */
+            border: 1px solid #ffffff;
             display: inline-block;
             margin-bottom: 20px;
         }
+        
 
         .tagline {
-            font-size: 24px;
-            color: #ffaa00;
+            font-size: 18px; /* Adjust the size as needed */
+            color: #f7ac54;
         }
+        
 
         /* Services Section */
         .services {
@@ -83,13 +90,15 @@
 
         .services-title {
             font-size: 18px;
-            color: #ffaa00;
+            color: #f7ac54;
             margin-bottom: 20px;
         }
 
         .services-content {
-            font-size: 24px;
+            font-size: 48px; /* Adjust size as needed */
+            font-family: 'Merriweather', serif;
         }
+        
 
         .vertical-line {
             position: absolute;
@@ -98,7 +107,7 @@
             transform: translateX(-50%);
             height: 50px;
             width: 2px;
-            background-color: #ffaa00;
+            background-color: #f7ac54;
         }
 
         /* Sections */
@@ -109,7 +118,7 @@
 
         .section-title {
             font-size: 22px;
-            color: #ffaa00;
+            color: #f7ac54;
             margin-bottom: 20px;
         }
 
@@ -117,6 +126,20 @@
             font-size: 18px;
             color: #ffffff;
         }
+
+        .sections-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adjust spacing between columns */
+            padding: 50px 20px;
+        }
+        
+        .section {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        
 
         /* Footer */
         .footer {
@@ -154,24 +177,30 @@
         <section class="services">
             <div class="vertical-line"></div>
             <h2 class="services-title">OUR SERVICES</h2>
-            <p class="services-content">Our team will take your portfolio to the next new level</p>
+            <p class="services-content">
+                Our team will take your portfolio to the <br> 
+                next new level
+            </p>
         </section>
 
         <!-- New Sections Below Our Services -->
-        <section class="section">
-            <h2 class="section-title">Section 1</h2>
-            <p class="section-content">This is the content for the first new section. Here you can describe your offerings or services in more detail.</p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Section 2</h2>
-            <p class="section-content">This is the content for the second new section. Add more information about your company or product here.</p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Section 3</h2>
-            <p class="section-content">This is the content for the third new section. You can provide additional details or features of your business here.</p>
-        </section>
+        <div class="sections-container">
+            <section class="section">
+                <h2 class="section-title">Section 1</h2>
+                <p class="section-content">This is the content for the first new section. Here you can describe your offerings or services in more detail.</p>
+            </section>
+        
+            <section class="section">
+                <h2 class="section-title">Section 2</h2>
+                <p class="section-content">This is the content for the second new section. Add more information about your company or product here.</p>
+            </section>
+        
+            <section class="section">
+                <h2 class="section-title">Section 3</h2>
+                <p class="section-content">This is the content for the third new section. You can provide additional details or features of your business here.</p>
+            </section>
+        </div>
+        
     </main>
 
     <footer class="footer">
