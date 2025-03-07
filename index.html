@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3-HM Website Replica</title>
-    <link rel="icon" type="image/png" href="Logo2.png"> <!-- Added Favicon -->
+    <link rel="icon" type="image/png" href="Logo2.png">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 
     <style>
@@ -15,12 +15,11 @@
             color: #ffffff;
         }
 
-        /* Header Styling */
         .header {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px; /* Adds space between logo and link */
+            gap: 30px;
             padding: 30px;
             background-color: rgb(24, 24, 24);
             height: 5%;
@@ -32,7 +31,6 @@
             opacity: 0;
             transform: translateY(-100%);
         }
-        
 
         .header.visible {
             opacity: 1;
@@ -41,20 +39,17 @@
 
         .logo {
             position: absolute;
-            left: 30px; /* Adjusts logo position */
+            left: 30px;
         }
 
         .get-in-touch {
             font-size: 12px;
-            color: f7ac54;
+            color: #f7ac54;
             text-decoration: none;
             position: absolute;
-            right: 120px; /* Moves it 10px from the right */
+            right: 120px;
         }
-        
-            
 
-        /* Hero Section */
         .hero {
             display: flex;
             flex-direction: column;
@@ -62,26 +57,23 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
-            background-color: rgb(31, 31, 31); /* Updated background */
+            background-color: rgb(31, 31, 31);
         }
 
         .hero-box h1 {
             font-size: 51.5px;
             font-family: 'Merriweather', serif;
-            padding: 40px 50px; /* Increase padding for a larger box */
+            padding: 40px 50px;
             border: 1px solid #ffffff;
             display: inline-block;
             margin-bottom: 20px;
         }
-        
 
         .tagline {
-            font-size: 18px; /* Adjust the size as needed */
+            font-size: 18px;
             color: #f7ac54;
         }
-        
 
-        /* Services Section */
         .services {
             text-align: center;
             padding: 50px 20px;
@@ -95,10 +87,16 @@
         }
 
         .services-content {
-            font-size: 48px; /* Adjust size as needed */
+            font-size: 48px;
             font-family: 'Merriweather', serif;
         }
-        
+
+        .service-icons {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 40px 0;
+        }
 
         .vertical-line {
             position: absolute;
@@ -110,50 +108,82 @@
             background-color: #f7ac54;
         }
 
-        /* Sections */
-        .section {
-            padding: 50px 20px;
-            text-align: center;
+        .nft-project {
+            text-align: left; /* Align content to the left */
+            padding: 60px 40px;
+            background-color: rgb(31, 31, 31);
+            margin-top: 20px;
+            position: relative;
+            width: 100%; /* Adjust width to move left */
+            margin-left: 379px; /* Add left margin */
         }
 
-        .section-title {
-            font-size: 22px;
+        .nft-project::before {
+            content: "";
+            position: absolute;
+            top: 60px;
+            left: 40px;
+            width: 2px;
+            height: 50px;
+            background-color: #f7ac54;
+        }
+
+        .nft-project h2 {
             color: #f7ac54;
-            margin-bottom: 20px;
-        }
-
-        .section-content {
             font-size: 18px;
-            color: #ffffff;
         }
 
-        .sections-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Adjust spacing between columns */
-            padding: 50px 20px;
+        .nft-project h3 {
+            font-size: 36px;
+            font-family: 'Merriweather', serif;
+            margin-bottom: 10px;
         }
-        
-        .section {
-            flex: 1;
-            text-align: center;
-            padding: 20px;
-        }
-        
 
-        /* Footer */
+        .nft-project p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        .nft-project ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .nft-project ul li {
+            margin-bottom: 10px;
+        }
+
+        .nft-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f7ac54;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .nft-project h2 {
+            margin-top: 60px; /* Push the text below the vertical line */
+            color: #f7ac54;
+            font-size: 18px;
+            margin-left: 0px;
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
             background-color: #000;
             color: #ffffff;
         }
-        
+
         .logo img {
-            height: 50px; /* Adjust height as needed */
+            height: 50px;
             width: 50px;
         }
-        
     </style>
 </head>
 <body>
@@ -164,7 +194,6 @@
         </div>
         <a href="#" class="get-in-touch">GET IN TOUCH ></a>
     </header>
-    
 
     <main>
         <section class="hero">
@@ -181,26 +210,24 @@
                 Our team will take your portfolio to the <br> 
                 next new level
             </p>
+            <div class="service-icons">
+                <div class="service-item"><i>&#x1F4DC;</i><h3>NFTs</h3><p>We specialize in exclusive NFT collections.</p></div>
+                <div class="service-item"><i>&#x1F4A1;</i><h3>Collectibles</h3><p>Find rare and valuable collectibles.</p></div>
+                <div class="service-item"><i>&#x1F4F9;</i><h3>YouTube</h3><p>Engaging video content for audiences.</p></div>
+            </div>
         </section>
 
-        <!-- New Sections Below Our Services -->
-        <div class="sections-container">
-            <section class="section">
-                <h2 class="section-title">Section 1</h2>
-                <p class="section-content">This is the content for the first new section. Here you can describe your offerings or services in more detail.</p>
-            </section>
-        
-            <section class="section">
-                <h2 class="section-title">Section 2</h2>
-                <p class="section-content">This is the content for the second new section. Add more information about your company or product here.</p>
-            </section>
-        
-            <section class="section">
-                <h2 class="section-title">Section 3</h2>
-                <p class="section-content">This is the content for the third new section. You can provide additional details or features of your business here.</p>
-            </section>
-        </div>
-        
+        <section class="nft-project">
+            <h2>NFT PROJECT</h2>
+            <h3>Travelogue</h3>
+            <p>Travelogue is a collection of travel photos shot in India. The NFT project serves as the aesthetics behind my first-ever NFT project. This will feature 25 exclusive photographs, closing once all are claimed.</p>
+            <ul>
+                <li>NFTs are at no. 16</li>
+                <li>Limited edition NFTs</li>
+                <li>Trusted by Thousands</li>
+            </ul>
+            <a href="#" class="nft-button">GET IN TOUCH</a>
+        </section>
     </main>
 
     <footer class="footer">
