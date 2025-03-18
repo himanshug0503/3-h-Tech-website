@@ -367,8 +367,157 @@
                 width: 100%;
             }
         }
-        
 
+
+        /* YouTube Section Styling */
+.youtube-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: rgb(31, 31, 31);
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.youtube-content {
+    width: 50%;
+    color: #ffffff;
+}
+
+.youtube-title {
+    color: #f7ac54;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.youtube-content h3 {
+    font-size: 32px;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 15px;
+}
+
+.youtube-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.youtube-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.youtube-content ul li {
+    margin-bottom: 10px;
+}
+
+.youtube-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #f7ac54, #ff7b00);
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out;
+}
+
+.youtube-button:hover {
+    background: linear-gradient(45deg, #ff7b00, #f7ac54);
+    transform: scale(1.05);
+}
+
+.youtube-video {
+    width: 50%;
+}
+
+.youtube-video img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Testimonials Section Styling */
+.testimonials-section {
+    text-align: center;
+    background-color: #181818;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.testimonials-header {
+    margin-bottom: 40px;
+}
+
+.testimonials-title {
+    color: #f7ac54;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.testimonials-header h3 {
+    font-size: 32px;
+    font-family: 'Merriweather', serif;
+    color: #ffffff;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Work With Us Section Styling */
+.work-with-us {
+    text-align: center;
+    background-color: #181818;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+.work-with-us h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.email-contact a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f7ac54;
+    text-decoration: none;
+}
+
+.email-contact a:hover {
+    text-decoration: underline;
+}
+
+
+        
+            
         
         
     </style>
@@ -443,6 +592,74 @@
             </div>
         </div>
     </section>
+
+    <!-- YouTube Section -->
+<section class="youtube-section">
+    <div class="youtube-content">
+        <h2 class="youtube-title">YOUTUBE</h2>
+        <h3>Going places with - VOYAGE</h3>
+        <p>
+            Chances are unless you are very lucky you will go through many different relationships before 
+            you find your special someone. Finding your soulmate is like gambling. In poker and blackjack.
+        </p>
+        <p>
+            During your life, you will probably meet some people who seem like they may be the one, 
+            or that they are closers.
+        </p>
+        <ul>
+            <li>📜 <strong>Extended Research for your brand</strong></li>
+            <li>🏆 <strong>Award-winning strategies to boost your business</strong></li>
+            <li>👍 <strong>Trusted by Thousands</strong></li>
+        </ul>
+        <a href="#" class="youtube-button">GET IN TOUCH →</a>
+    </div>
+    <div class="youtube-video">
+        <img src="your-image.png" alt="YouTube Channel Preview">
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="testimonials-header">
+        <h2 class="testimonials-title">TESTIMONIALS</h2>
+        <h3>We have worked with some amazing companies & people around the world</h3>
+    </div>
+    
+    <div class="testimonials-container">
+        <div class="testimonial">
+            <img src="person1.jpg" alt="Client Image">
+            <p>
+                “These cartridges can be replaced by the printer ink of similar brand. 
+                Compatible Inkjet Cartridge will help you to make extra-ordinary savings 
+                with a money-back guarantee. As soon as the cartridge gets empty, 
+                the ink that it contains begins to dry.”
+            </p>
+        </div>
+        
+        <div class="testimonial">
+            <img src="person2.jpg" alt="Client Image">
+            <p>
+                “These cartridges can be replaced by the printer ink of similar brand. 
+                Compatible Inkjet Cartridge will help you to make extra-ordinary savings 
+                with a money-back guarantee. As soon as the cartridge gets empty, 
+                the ink that it contains begins to dry.”
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Work With Us Section -->
+<section class="work-with-us">
+    <h2>Interested to work with us? Drop us a line</h2>
+    <p class="email-contact"> 
+        <a href="mailto:official.3hmedia@gmail.com">official.3hmedia@gmail.com</a>
+    </p>
+</section>
+
+
+
+
+
     
 
     <footer class="footer">
