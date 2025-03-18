@@ -267,6 +267,108 @@
             transform: scale(1.05);
         }
 
+        .gallery-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #181818;
+            padding: 60px 20px;
+        }
+        
+        .gallery-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 50%;
+        }
+        
+        .gallery-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .gallery-content {
+            width: 50%;
+            color: #ffffff;
+        }
+        
+        .gallery-content h2 {
+            font-size: 18px;
+            color: #f7ac54;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-content h3 {
+            font-size: 32px;
+            font-family: 'Merriweather', serif;
+            margin-bottom: 15px;
+        }
+        
+        .gallery-content p {
+            font-size: 16px;
+            color: #dddddd;
+            line-height: 1.6;
+        }
+        
+        .gallery-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .gallery-content ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .gallery-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #f7ac54, #ff7b00);
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: background 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+        
+        .gallery-button:hover {
+            background: linear-gradient(45deg, #ff7b00, #f7ac54);
+            transform: scale(1.05);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .gallery-images {
+                width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        
+            .gallery-content {
+                width: 100%;
+            }
+        }
+        
+
         
         
     </style>
@@ -314,6 +416,34 @@
             <a href="#" class="nft-button">GET IN TOUCH</a>
         </section>
     </main>
+
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-images">
+                <img src="image1.jpg" alt="Gallery Image">
+                <img src="image2.jpg" alt="Gallery Image">
+                <img src="image3.jpg" alt="Gallery Image">
+                <img src="image4.jpg" alt="Gallery Image">
+                <img src="image5.jpg" alt="Gallery Image">
+                <img src="image6.jpg" alt="Gallery Image">
+            </div>
+            <div class="gallery-content">
+                <h2>THE GALLERY</h2>
+                <h3>You'll get the best pictures here</h3>
+                <p>
+                    During your life, you will probably meet some people who seem like they may be the one, or that they are closers. 
+                    Chances are, unless you are very lucky, you will go through many different relationships before you find your special someone.
+                </p>
+                <ul>
+                    <li>📊 Extended Research for your brand</li>
+                    <li>🏆 Award-winning strategies to boost your business</li>
+                    <li>🔒 Trusted by Thousands</li>
+                </ul>
+                <a href="#" class="gallery-button">GET IN TOUCH →</a>
+            </div>
+        </div>
+    </section>
+    
 
     <footer class="footer">
         &copy; 2025 3-HM. All Rights Reserved.
