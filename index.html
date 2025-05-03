@@ -438,8 +438,7 @@
         Trusted by Thousands
       </p>
       <!-- Button -->
-    <button style="margin-top: 20px; padding: 10px 20px; background-color: #ffffff; color: #333; border: none; border-radius: 5px; cursor: pointer;">
-        Get In Touch
+      <a href="#" class="gallery-button">GET IN TOUCH →</a>
     </button>
     
     </div>
@@ -491,13 +490,12 @@
       </p>
   
       <!-- Button -->
-      <button style="margin-top: 20px; padding: 10px 20px; background-color: #ffffff; color: #333; border: none; border-radius: 5px; cursor: pointer;">
-        Get In Touch
+      <a href="#" class="gallery-button">GET IN TOUCH →</a>
       </button>
     </div>
   </div>
   
-  <!-- NFT Project Section -->
+  <!-- NFT Project Section 2 -->
 <div style="width: 100%; height: 650px; background-color: rgb(32, 32, 32); display: flex; align-items: flex-start; padding: 0 50px; margin-top: 20px; justify-content: space-between;">
   
     <!-- Text Section -->
@@ -529,8 +527,7 @@
         Trusted by Thousands
       </p>
       <!-- Button -->
-    <button style="margin-top: 20px; padding: 10px 20px; background-color: #ffffff; color: #333; border: none; border-radius: 5px; cursor: pointer;">
-        Get In Touch
+      <a href="#" class="gallery-button">GET IN TOUCH →</a>
     </button>
     
     </div>
@@ -545,6 +542,8 @@
        
     </main>
 
+
+ <!-- Gallery Section Section -->
     <section class="gallery-section">
         <div class="gallery-container">
             <div class="gallery-images">
@@ -572,30 +571,44 @@
         </div>
     </section>
 
-    <!-- YouTube Section -->
-<section class="youtube-section">
-    <div class="youtube-content">
-        <h2 class="youtube-title">YOUTUBE</h2>
-        <h3>Going places with - VOYAGE</h3>
-        <p>
-            Chances are unless you are very lucky you will go through many different relationships before 
-            you find your special someone. Finding your soulmate is like gambling. In poker and blackjack.
-        </p>
-        <p>
-            During your life, you will probably meet some people who seem like they may be the one, 
-            or that they are closers.
-        </p>
-        <ul>
-            <li>📜 <strong>Extended Research for your brand</strong></li>
-            <li>🏆 <strong>Award-winning strategies to boost your business</strong></li>
-            <li>👍 <strong>Trusted by Thousands</strong></li>
-        </ul>
-        <a href="#" class="youtube-button">GET IN TOUCH →</a>
+<!-- Our Projects Title -->
+<div style="width: 100%; height: 450px; background-color: rgb(32, 32, 32); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 50px;">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <div style="width: 2px; height: 30px; background-color: white; margin: 0 auto 5px;"></div>
+      <h2 style="color: white; font-size: 60px; margin: 0;">OUR PROJECTS</h2>
     </div>
-    <div class="youtube-video">
-        <img src="your-image.png" alt="YouTube Channel Preview">
+  
+    <!-- Image Slider Section -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div class="slider-container" style="width: 1000px; overflow: hidden; border-radius: 10px;">
+        <div class="slider" id="slider" style="display: flex; width: 2400px; transition: transform 1s ease-in-out;">
+          <img src="images/image1.jpeg" alt="1" class="slider-image" style="width: 300px; height: 200px; object-fit: cover; margin-right: 40px;">
+          <img src="images/image2.jpeg" alt="2" class="slider-image" style="width: 300px; height: 200px; object-fit: cover; margin-right: 40px;">
+          <img src="images/image3.jpeg" alt="3" class="slider-image" style="width: 300px; height: 200px; object-fit: cover; margin-right: 40px;">
+          <img src="images/image4.jpeg" alt="4" class="slider-image" style="width: 300px; height: 200px; object-fit: cover; margin-right: 40px;">
+          <img src="images/image5.jpeg" alt="5" class="slider-image" style="width: 300px; height: 200px; object-fit: cover; margin-right: 40px;">
+          <img src="images/image1.jpeg" alt="6" class="slider-image" style="width: 300px; height: 200px; object-fit: cover;">
+        </div>
+      </div>
     </div>
-</section>
+  </div>
+  
+  <!-- Extra CSS for rounded corners, hover effect, and individual borders -->
+  <style>
+    .slider-image {
+      border: 2px solid #ccc; /* individual border */
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: white; /* optional: adds a clean white background inside the border */
+    }
+  
+    .slider-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+
 
 <!-- Testimonials Section -->
 <section class="testimonials-section">
@@ -640,7 +653,7 @@
 
 
     
-
+<!-- Footer Section -->
     <footer class="footer">
         &copy; 2025 3-HM. All Rights Reserved.
     </footer>
@@ -659,5 +672,36 @@
         });
     </script>
 
+
+
+    <!-- JavaScript to make the slider loop infinitely -->
+<script>
+    let slider = document.getElementById('slider');
+    let images = document.querySelectorAll('.slider-image');
+    let imageCount = images.length;
+    let imageWidth = 340; // Width of each image including margin
+  
+    function moveSlider() {
+      let currentTransform = parseInt(window.getComputedStyle(slider).transform.split(',')[4]) || 0;
+      let newTransform = currentTransform - imageWidth;
+  
+      if (newTransform <= -(imageWidth * imageCount)) {
+        // Reset to the first image
+        slider.style.transition = 'none'; // Disable smooth transition
+        slider.style.transform = 'translateX(0)';
+        
+        // Trigger a reflow to restart the animation without interrupting the flow
+        setTimeout(() => {
+          slider.style.transition = 'transform 1s ease-in-out'; // Re-enable smooth transition
+          moveSlider(); // Continue the loop
+        }, 50);
+      } else {
+        slider.style.transform = `translateX(${newTransform}px)`;
+      }
+    }
+  
+    setInterval(moveSlider, 3000); // Move slider every 3 seconds (adjustable)
+  
+  </script>
 </body>
 </html>
