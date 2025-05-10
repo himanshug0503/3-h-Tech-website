@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-HM Website Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    
+
+        <style>
+            /* General reset for margins and padding */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            /* Body Styling */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: rgb(32, 32, 32); /* Dark background */
+                color: #f4f4f4; /* Light text for contrast */
+                line-height: 1.6;
+                padding-top: 50px; /* Adds space below the fixed header */
+            }
+    
+            /* Header Styling */
+            header {
+                background-color: #334a5c;
+                color: white;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+            }
+    
+            .logo img {
+                width: 120px;
+            }
+    
+    
+            /* Main Section */
+            main {
+                padding: 30px 50px;
+            }
+    
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: #f4f4f4; /* Light color for heading */
+            }
+    
+            h3 {
+                font-size: 1.6rem;
+                margin-top: 20px;
+                color: #f4f4f4; /* Light color for heading */
+            }
+    
+            p {
+                font-size: 1rem;
+                margin-bottom: 10px;
+                text-align: justify;
+                color: #d1d1d1; /* Light grey color for text */
+            }
+    
+            ul {
+                margin-left: 20px;
+                color: #d1d1d1; /* Light grey color for list items */
+            }
+    
+            /* Link styling */
+            a {
+                color: #ff6600;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                text-decoration: underline;
+            }
+    
+            /* Footer Section for Grievance Officer Details */
+            section p strong {
+                display: inline-block;
+                margin-top: 10px;
+                font-weight: bold;
+                color: #f4f4f4; /* Light text for emphasis */
+            }
+    
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 10px;
+                }
+    
+                .get-in-touch {
+                    margin-top: 10px;
+                }
+    
+                main {
+                    padding: 20px;
+                }
+    
+                h2, h3 {
+                    font-size: 1.5rem;
+                }
+            }
+
+
+            .header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                padding: 30px;
+                background-color: rgb(24, 24, 24);
+                height: 5%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+    
+            .header.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .logo {
+                position: absolute;
+                left: 30px;
+            }
+            .logo img {
+                height: 50px;
+                width: 50px;
+            }
+
+            .get-in-touch {
+                font-size: 12px;
+                color: #f7ac54;
+                text-decoration: none;
+                position: absolute;
+                right: 120px;
+            }
+
+
+            <!-- Footer section -->   
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Adjust size of icons */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1da1f2; /* Change to a suitable color on hover */
+}
+
+/* Optional: Add specific icon colors */
+.social-icon .fa-facebook-f:hover {
+    color: #3b5998;
+}
+
+.social-icon .fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.social-icon .fa-instagram:hover {
+    color: #e4405f;
+}
+
+.social-icon .fa-reddit-alien:hover {
+    color: #ff4500;
+}
+
+.social-icon .fa-youtube:hover {
+    color: #ff0000;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #ffffff;
+}
+
+
+
+
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}            
+    
+    
+        </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="header" id="header">
+            <div class="logo">
+                <img src="logo.png" alt="3-HM Logo">
+            </div>
+            <a href="#" class="get-in-touch">GET IN TOUCH ></a>
+        </header>
+    
+        <!-- Project Details page -->
+        
+        <div class="project-container">
+            <h1 class="project-title">Amazing Project Title</h1>
+            <img src="Images/image1.jpeg" alt="Project Image" class="project-image">
+            <p class="project-description">
+                Travelogue is a collection of Travel photos shot in India.
+                The NFT project serves as the aesthetics behind my first ever NFT project.
+                And this is going to be the exclusive 25 photographs,
+                and the list is going to be closed as soon as we get the no. 25.
+            </p>
+          </div>
+        
+        </body>
+        </html>
+
+ 
+</main>
+
+
+
+
+    
+<!-- Footer Section -->
+
+<footer class="footer">
+    2025 3-HM. All Rights Reserved. 
+    | <a href="/privacy-policy" class="footer-link">Privacy Policy</a> 
+    | <a href="/terms-of-service" class="footer-link">Terms and Service</a>
+    <div class="social-media">
+        <a href="https://www.facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.reddit.com" class="social-icon" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+        <a href="https://www.youtube.com" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('visible');
+            }
+        });
+        
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            header.classList.toggle('visible', window.scrollY > 50);
+        });
+    </script>
+
+
+
+    <!-- JavaScript to make the slider loop infinitely -->
+<script>
+    let slider = document.getElementById('slider');
+    let images = document.querySelectorAll('.slider-image');
+    let imageCount = images.length;
+    let imageWidth = 340; // Width of each image including margin
+  
+    function moveSlider() {
+      let currentTransform = parseInt(window.getComputedStyle(slider).transform.split(',')[4]) || 0;
+      let newTransform = currentTransform - imageWidth;
+  
+      if (newTransform <= -(imageWidth * imageCount)) {
+        // Reset to the first image
+        slider.style.transition = 'none'; // Disable smooth transition
+        slider.style.transform = 'translateX(0)';
+        
+        // Trigger a reflow to restart the animation without interrupting the flow
+        setTimeout(() => {
+          slider.style.transition = 'transform 1s ease-in-out'; // Re-enable smooth transition
+          moveSlider(); // Continue the loop
+        }, 50);
+      } else {
+        slider.style.transform = `translateX(${newTransform}px)`;
+      }
+    }
+  
+    setInterval(moveSlider, 3000); // Move slider every 3 seconds (adjustable)
+  
+  </script>
+</body>
+</html>
