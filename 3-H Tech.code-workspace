@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "3-h-Tech",
+			"path": "../3-h-Tech"
+		},
+		{
+			"name": "3-h-Tech-website",
+			"path": "."
+		},
+		{
+			"name": "Cal-WA",
+			"path": "../Cal-WA"
+		},
+		{
+			"name": "My-Quotes-Thingy",
+			"path": "../My-Quotes-Thingy"
+		},
+		{
+			"name": "Everest-Masale-Replica",
+			"path": "../Everest-Masale-Replica"
+		}
+	],
+	"settings": {}
+}
