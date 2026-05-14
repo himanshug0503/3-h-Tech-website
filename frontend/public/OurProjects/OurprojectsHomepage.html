@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-HM Our Projects</title>
+    <link rel="icon" type="image/png" href="Logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(24, 24, 24);
+            color: #ffffff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+            background-color: rgb(24, 24, 24);
+            height: 5%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+
+        .header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo {
+            position: absolute;
+            left: 30px;
+        }
+
+        .get-in-touch {
+            font-size: 12px;
+            color: #f7ac54;
+            text-decoration: none;
+            position: absolute;
+            right: 120px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: rgb(31, 31, 31);
+        }
+
+        .hero-box h1 {
+            font-size: 51.5px;
+            font-family: 'Merriweather', serif;
+            padding: 40px 50px;
+            border: 1px solid #ffffff;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #f7ac54;
+        }
+
+
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 50px;
+            width: 2px;
+            background-color: #f7ac54;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .gallery-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #181818;
+            padding: 60px 20px;
+        }
+        
+        .gallery-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 50%;
+        }
+        
+        .gallery-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .gallery-content {
+            width: 50%;
+            color: #ffffff;
+        }
+        
+        .gallery-content h2 {
+            font-size: 18px;
+            color: #f7ac54;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-content h3 {
+            font-size: 32px;
+            font-family: 'Merriweather', serif;
+            margin-bottom: 15px;
+        }
+        
+        .gallery-content p {
+            font-size: 16px;
+            color: #dddddd;
+            line-height: 1.6;
+        }
+        
+        .gallery-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .gallery-content ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .gallery-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #f7ac54, #ff7b00);
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: background 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+        
+        .gallery-button:hover {
+            background: linear-gradient(45deg, #ff7b00, #f7ac54);
+            transform: scale(1.05);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .gallery-images {
+                width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        
+            .gallery-content {
+                width: 100%;
+            }
+        }
+
+
+        /* YouTube Section Styling */
+.youtube-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: rgb(31, 31, 31);
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.youtube-content {
+    width: 50%;
+    color: #ffffff;
+}
+
+.youtube-title {
+    color: #f7ac54;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.youtube-content h3 {
+    font-size: 32px;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 15px;
+}
+
+.youtube-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.youtube-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.youtube-content ul li {
+    margin-bottom: 10px;
+}
+
+.youtube-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #f7ac54, #ff7b00);
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out;
+}
+
+.youtube-button:hover {
+    background: linear-gradient(45deg, #ff7b00, #f7ac54);
+    transform: scale(1.05);
+}
+
+.youtube-video {
+    width: 50%;
+}
+
+.youtube-video img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Testimonials Section Styling */
+.testimonials-section {
+    text-align: center;
+    background-color: #181818;
+    padding: 1px 1px;
+    max-width: 1200px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.testimonials-header {
+    margin-bottom: 40px;
+}
+
+.testimonials-title {
+    color: #f7ac54;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.testimonials-header h3 {
+    font-size: 32px;
+    font-family: 'Merriweather', serif;
+    color: #ffffff;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Work With Us Section Styling */
+.work-with-us {
+    text-align: center;
+    background-color: #181818;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+.work-with-us h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.email-contact a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f7ac54;
+    text-decoration: none;
+}
+
+.email-contact a:hover {
+    text-decoration: underline;
+}
+
+
+<!-- Footer section -->   
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Adjust size of icons */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1da1f2; /* Change to a suitable color on hover */
+}
+
+/* Optional: Add specific icon colors */
+.social-icon .fa-facebook-f:hover {
+    color: #3b5998;
+}
+
+.social-icon .fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.social-icon .fa-instagram:hover {
+    color: #e4405f;
+}
+
+.social-icon .fa-reddit-alien:hover {
+    color: #ff4500;
+}
+
+.social-icon .fa-youtube:hover {
+    color: #ff0000;
+}
+
+
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}            
+        
+        
+    </style>
+</head>
+
+
+<body>
+<!-- Header Section -->
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="logo.png" alt="3-HM Logo" width="120">
+        </div>
+        <a href="#" class="get-in-touch">GET IN TOUCH ></a>
+    </header>
+
+<!-- Hero Section -->
+
+    <main>
+        <section class="hero">
+            <div class="hero-box">
+                <h1>List of Our Projects</h1>
+            </div>
+            
+        </section>
+
+       
+
+<!-- NFT Project Section -->
+<div style="width: 100%; height: 650px; background-color: rgb(32, 32, 32); display: flex; align-items: flex-start; padding: 0 50px; margin-top: 0px; justify-content: space-between;">
+  
+    <!-- Text Section -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 40px; margin-left: 300px;">
+      <div style="width: 2px; height: 30px; background-color: white; margin-bottom: 5px;"></div>
+      
+      <h2 style="color: white; font-size: 16px; margin: 0;">NFT PROJECT</h2>
+      
+      <h3 style="color: white; font-size: 30px; margin: 55px 0 0 0;">Travelogue</h3>
+      
+      <p style="color: white; font-size: 16px; margin-top: 10px; line-height: 1.6;">
+        Travelogue is a collection of Travel photos shot in India.<br>
+        The NFT project serves as the aesthetics behind my first ever NFT project.<br>
+        And this is going to be the exclusive 25 photographs,<br>
+        and the list is going to be closed as soon as we get the no. 25.
+      </p>
+  
+      <p style="color: white; font-size: 16px; margin: 50px 0 8px 0;">Grab the opportunity as soon as you can.</p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/document.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        NFTs are at no. 16
+      </p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/bookmark.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        Limeted edition NFTs
+      </p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/like.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        Trusted by Thousands
+      </p>
+      <!-- Button -->
+      <a href="#" class="gallery-button">GET IN TOUCH →</a>
+    </button>
+    
+    </div>
+ 
+    <!-- Image Section -->
+    <div style="margin-top: 40px; margin-right: 400px;">
+      <img src="images/image1.jpeg" alt="NFT Project Preview" style="width: 500px; height: auto; border-radius: 8px;">
+    </div>
+  </div>
+    
+</div> 
+
+
+<!-- NFT Project  Mirror Section -->
+<div style="width: 100%; height: 650px; background-color: rgb(24, 24, 24); display: flex; align-items: flex-start; padding: 0 50px; margin-top: 0px; justify-content: space-between;">
+  
+    <!-- Image Section  -->
+    <div style="margin-top: 40px; margin-left: 280px;">
+      <img src="images/image1.jpeg" alt="NFT Project Preview" style="width: 500px; height: auto; border-radius: 8px;">
+    </div>
+  
+    <!-- Text Section  -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 40px; margin-right: 300px;">
+      <div style="width: 2px; height: 30px; background-color: white; margin-bottom: 5px;"></div>
+      
+      <h2 style="color: white; font-size: 16px; margin: 0;">NFT PROJECT</h2>
+      
+      <h3 style="color: white; font-size: 30px; margin: 55px 0 0 0;">Travelogue</h3>
+      
+      <h4 style="color: white; font-size: 16px; margin-top: 10px; line-height: 1.6;">
+        Travelogue is a collection of Travel photos shot in India.<br>
+        The NFT project serves as the aesthetics behind my first ever NFT project.<br>
+        And this is going to be the exclusive 25 photographs,<br>
+        and the list is going to be closed as soon as we get the no. 25.
+      </h4>
+  
+      <p style="color: white; font-size: 16px; margin: 50px 0 8px 0;">Grab the opportunity as soon as you can.</p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/document.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        NFTs are at no. 16
+      </p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/bookmark.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        Limited edition NFTs
+      </p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/like.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        Trusted by Thousands
+      </p>
+  
+      <!-- Button -->
+      <a href="#" class="gallery-button">GET IN TOUCH →</a>
+      </button>
+    </div>
+  </div>
+  
+  <!-- NFT Project Section 2 -->
+<div style="width: 100%; height: 650px; background-color: rgb(32, 32, 32); display: flex; align-items: flex-start; padding: 0 50px; margin-top: 20px; justify-content: space-between;">
+  
+    <!-- Text Section -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 40px; margin-left: 300px;">
+      <div style="width: 2px; height: 30px; background-color: white; margin-bottom: 5px;"></div>
+      
+      <h2 style="color: white; font-size: 16px; margin: 0;">NFT PROJECT</h2>
+      
+      <h3 style="color: white; font-size: 30px; margin: 55px 0 0 0;">Travelogue</h3>
+      
+      <p style="color: white; font-size: 16px; margin-top: 10px; line-height: 1.6;">
+        Travelogue is a collection of Travel photos shot in India.<br>
+        The NFT project serves as the aesthetics behind my first ever NFT project.<br>
+        And this is going to be the exclusive 25 photographs,<br>
+        and the list is going to be closed as soon as we get the no. 25.
+      </p>
+  
+      <p style="color: white; font-size: 16px; margin: 50px 0 8px 0;">Grab the opportunity as soon as you can.</p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/document.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        NFTs are at no. 16
+      </p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/bookmark.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        Limeted edition NFTs
+      </p>
+      <p style="color: white; font-size: 16px; margin: 8px 0;">
+        <img src="images/like.png" alt="NFT Icon" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+        Trusted by Thousands
+      </p>
+      <!-- Button -->
+      <a href="#" class="gallery-button">GET IN TOUCH →</a>
+    </button>
+    
+    </div>
+ 
+    <!-- Image Section -->
+    <div style="margin-top: 40px; margin-right: 400px;">
+      <img src="images/image1.jpeg" alt="NFT Project Preview" style="width: 500px; height: auto; border-radius: 8px;">
+    </div>
+  </div>
+    
+</div> 
+       
+    </main>
+
+
+
+
+
+
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="testimonials-header">
+        <h2 class="testimonials-title"></h2>
+        <p class="email-contact"> 
+            <a href="mailto:official.3hmedia@gmail.com">See More</a>
+        </p>
+    </div>
+</section>
+
+   
+
+
+
+
+
+    
+<!-- Footer Section -->
+
+<footer class="footer">
+    <div class="footer-content">
+      <p>2025 3-HM. All Rights Reserved. 
+        | <a href="PrivacyPolicy\PrivacyPolicy.html" class="footer-link">Privacy Policy</a> 
+        | <a href="TermsOfService\TermsOfService.html" class="footer-link">Terms of Service</a>
+      </p>
+      <div class="social-media">
+        <a href="https://www.facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.reddit.com" class="social-icon" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+        <a href="https://www.youtube.com" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('visible');
+            }
+        });
+        
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            header.classList.toggle('visible', window.scrollY > 50);
+        });
+    </script>
+
+
+
+    <!-- JavaScript to make the slider loop infinitely -->
+<script>
+    let slider = document.getElementById('slider');
+    let images = document.querySelectorAll('.slider-image');
+    let imageCount = images.length;
+    let imageWidth = 340; // Width of each image including margin
+  
+    function moveSlider() {
+      let currentTransform = parseInt(window.getComputedStyle(slider).transform.split(',')[4]) || 0;
+      let newTransform = currentTransform - imageWidth;
+  
+      if (newTransform <= -(imageWidth * imageCount)) {
+        // Reset to the first image
+        slider.style.transition = 'none'; // Disable smooth transition
+        slider.style.transform = 'translateX(0)';
+        
+        // Trigger a reflow to restart the animation without interrupting the flow
+        setTimeout(() => {
+          slider.style.transition = 'transform 1s ease-in-out'; // Re-enable smooth transition
+          moveSlider(); // Continue the loop
+        }, 50);
+      } else {
+        slider.style.transform = `translateX(${newTransform}px)`;
+      }
+    }
+  
+    setInterval(moveSlider, 3000); // Move slider every 3 seconds (adjustable)
+  
+  </script>
+</body>
+</html>

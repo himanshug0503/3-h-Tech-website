@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+  }
+  .project-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .project-image {
+    max-width: 800px; /* Limit maximum width */
+    width: 90%; /* Responsive width */
+    height: auto;
+    display: block; /* Remove any extra spacing */
+    margin: 0 auto 20px auto; /* Center the image with margin below */
+    border-radius: 10px; /* Slightly round the corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for better appearance */
+  }
+  
+  
+  .project-description {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
